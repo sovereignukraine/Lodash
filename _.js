@@ -14,10 +14,14 @@ inRange: function(number, start, end){
       return (number >= end)&&(number < start);
    }
 return (number >= start)&&(number < end); 
+},
+words: function(string){
+   let words = string.split(' ');
+   return words;
 }
 };
 
-console.log(_.inRange(5, 5, -5));
+
 
 // Do not write or modify code below this line.
 module.exports = _;
