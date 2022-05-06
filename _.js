@@ -18,6 +18,21 @@ return (number >= start)&&(number < end);
 words: function(string){
    let words = string.split(' ');
    return words;
+},
+pad: function(string, length){
+   if(string.length >= length){
+      return string;
+   };
+   let diff = length - string.length;
+   let start = '';
+   let end = '';
+   for (let i = 0; i < Math.floor(diff/2); i++){
+      start += ' ';
+   };
+   for (let i = 0; i < length - string.length - (Math.floor(diff/2)); i++){
+      end += ' ';
+   }
+   return start + string + end;
 }
 };
 
