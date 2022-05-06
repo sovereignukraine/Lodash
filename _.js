@@ -36,9 +36,16 @@ pad: function(string, length){
 },
 has: function(obj, key){
     return obj.hasOwnProperty(key);
+},
+invert: function(obj){
+let invertObj = {};
+for(let key in obj){
+   let newKey = obj[key];
+   invertObj[newKey] = key;
 }
-};
-
+return invertObj;
+}
+}
 
 
 // Do not write or modify code below this line.
