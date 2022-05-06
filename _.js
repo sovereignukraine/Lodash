@@ -54,6 +54,13 @@ findKey: function(obj, func){
       }
      
    }
+},
+drop: function(arr, num){
+   if(num === undefined){
+      arr.shift();
+      return arr
+   };
+return arr.slice(num);
 }
 }
 
