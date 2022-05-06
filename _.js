@@ -33,6 +33,9 @@ pad: function(string, length){
       end += ' ';
    }
    return start + string + end;
+},
+has: function(obj, key){
+    return obj.hasOwnProperty(key);
 }
 };
 
