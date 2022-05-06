@@ -44,6 +44,16 @@ for(let key in obj){
    invertObj[newKey] = key;
 }
 return invertObj;
+},
+findKey: function(obj, func){
+   for(let key in obj){
+      if(func(obj[key])){
+         return key;
+      }else{
+         return undefined;
+      }
+     
+   }
 }
 }
 
