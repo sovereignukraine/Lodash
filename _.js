@@ -61,6 +61,29 @@ drop: function(arr, num){
       return arr
    };
 return arr.slice(num);
+},
+dropWhile: function(arr, func){
+for(let i = 0; i < arr.length; i++){
+   if (func(arr[i], i, arr)){
+      arr.shift();
+   }
+}
+return arr;
+},
+chunk: function(arr, size){
+let newArr = [];
+let chunk = [];
+if(size === undefined){
+   size = 1;
+}
+for(let j = 0; j < arr.length; j++){     
+   chunk.push(arr[j]);
+   if(chunk.length >= size || j === arr.length-1){
+      newArr.push(chunk);
+      chunk = [];
+   }
+   }
+return newArr;
 }
 }
 
